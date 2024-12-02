@@ -11,6 +11,14 @@ body {
     font-family: Arial, sans-serif;
     line-height: 1.6;
 }
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 20px;
+    background-color: #333;
+    color: white;
+}
     
 header,
 main,
@@ -21,8 +29,6 @@ article {
     padding: 20px;
     box-sizing: border-box;
 }
-    
-header,
 footer {
     background-color: #333;
     color: white;
