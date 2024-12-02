@@ -1,0 +1,191 @@
+:root {
+    --main-radius: 5px;
+    --main-padding: 5px;
+}
+
+     
+    
+        /* Genel Stil Ayarları */
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+    line-height: 1.6;
+}
+    
+header,
+main,
+aside,
+footer,
+section,
+article {
+    padding: 20px;
+    box-sizing: border-box;
+}
+    
+header,
+footer {
+    background-color: #333;
+    color: white;
+    text-align: center;
+}
+    
+nav ul {
+    display: flex;
+    justify-content: center;
+    list-style: none;
+    padding: 0;
+    margin: 10px 0 0;
+}
+    
+nav ul li {
+    margin: 0 15px;
+}
+    
+nav ul li a {
+    text-decoration: none;
+    color: white;
+    font-weight: bold;
+}
+    
+a:hover {
+    text-decoration: underline;
+}
+    
+main {
+    background-color: #f4f4f4;
+}
+    
+aside {
+    background-color: #f1f1f1;
+}
+    
+        /* Grid Yapısı */
+.container {
+    display: grid;
+    grid-template-areas:
+    "header header header"
+    "aside main main"
+    "footer footer footer";
+    grid-template-columns: 1fr 2fr;
+    grid-gap: 10px;
+}
+    
+header {
+    grid-area: header;
+}
+    
+main {
+    grid-area: main;
+}
+    
+aside {
+    grid-area: aside;
+}
+    
+footer {
+    grid-area: footer;
+}
+    
+        /* Responsive Tasarım */
+/* Mobil (Telefon) Ekranlar (0px - 480px) */
+@media (max-width: 480px) {
+    .container {
+        grid-template-areas:
+            "header"
+            "main"
+            "aside"
+            "footer";
+        grid-template-columns: 1fr;
+    }
+}
+
+/* Tablet Ekranlar (481px - 1024px) */
+@media (min-width: 481px) and (max-width: 1024px) {
+    .container {
+        grid-template-areas:
+            "header header"
+            "main aside"
+            "footer footer";
+        grid-template-columns: 2fr 1fr;
+    }
+}
+
+/* Bilgisayar Ekranları (1025px - 1440px) */
+@media (min-width: 1025px) and (max-width: 1440px) {
+    .container {
+        grid-template-areas:
+            "header header header"
+            "aside main main"
+            "footer footer footer";
+        grid-template-columns: 1fr 2fr;
+    }
+}
+
+/* Büyük TV Ekranları (1441px ve üzeri) */
+@media (min-width: 1441px) {
+    .container {
+        grid-template-areas:
+            "header header header"
+            "main main aside"
+            "footer footer footer";
+        grid-template-columns: 2fr 3fr 1fr;
+    }
+}
+    
+        /* Bölüm ve İçerik Stilleri */
+section {
+    margin-bottom: 20px;
+    background-color: #fff;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+}
+    
+article {
+    background-color: #e9ecef;
+    border-radius: 5px;
+}
+    
+figure {
+    margin: 0;
+    text-align: center;
+}
+    
+figure img {
+    max-width: 100%;
+    height: auto;
+    border-radius: 5px;
+}
+    
+figcaption {
+    margin-top: 10px;
+    font-style: italic;
+}
+    
+form label {
+    display: block;
+    margin-bottom: 5px;
+    font-weight: bold;
+}
+    
+form input,
+form textarea,
+form button {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+    
+form button {
+    background-color: #333;
+    color: white;
+    cursor: pointer;
+    font-weight: bold;
+}
+    
+form button:hover {
+    background-color: #555;
+}
+    
+    

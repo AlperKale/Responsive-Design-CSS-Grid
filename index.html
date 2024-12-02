@@ -3,8 +3,76 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Responsive-Design-CSS-Grid</title>
+    <title>Semantik Grid Yapısı</title>
     <link rel="stylesheet" href="style.css" />
   </head>
-  <body></body>
+  <body>
+    <div class="container">
+      <!-- Başlık -->
+      <header>
+        <h1>Web Sitem</h1>
+        <nav>
+          <ul>
+            <li><a href="#home">Ana Sayfa</a></li>
+            <li><a href="#about">Hakkımızda</a></li>
+            <li><a href="#contact">İletişim</a></li>
+          </ul>
+        </nav>
+      </header>
+
+      <!-- Kenar Çubuğu -->
+      <aside>
+        <h3>Popüler Makaleler</h3>
+        <ul>
+          <li><a href="#article1">Makale 1</a></li>
+          <li><a href="#article2">Makale 2</a></li>
+        </ul>
+      </aside>
+
+      <!-- Ana İçerik -->
+      <main>
+        <section id="about">
+          <h2>Hakkımızda</h2>
+          <p>Bu bölümde web sitemiz hakkında bilgi veriyoruz.</p>
+        </section>
+        <section id="features">
+          <h2>Özellikler</h2>
+          <ul>
+            <li>Hızlı</li>
+            <li>Kullanıcı Dostu</li>
+            <li>Mobil Uyumlu</li>
+          </ul>
+        </section>
+        <article id="latest-news">
+          <h2>Son Haberler</h2>
+          <p>Web sitemiz için yeni bir özellik ekledik: karanlık mod!</p>
+        </article>
+        <figure>
+          <img src="example.jpg" alt="Örnek Resim" />
+          <figcaption>Web sitemizin modern ve şık tasarımı.</figcaption>
+        </figure>
+        <section id="contact">
+          <h2>İletişim</h2>
+          <form action="/submit" method="post">
+            <label for="name">Adınız:</label>
+            <input type="text" id="name" name="name" required />
+            <label for="email">E-posta:</label>
+            <input type="email" id="email" name="email" required />
+            <label for="message">Mesajınız:</label>
+            <textarea id="message" name="message" rows="4" required></textarea>
+            <button type="submit">Gönder</button>
+          </form>
+        </section>
+      </main>
+
+      <!-- Alt Bilgi -->
+      <footer>
+        <p>&copy; 2024 Muhammed Yusuf. Tüm Hakları Saklıdır.</p>
+        <ul>
+          <li><a href="#privacy">Gizlilik Politikası</a></li>
+          <li><a href="#terms">Kullanım Şartları</a></li>
+        </ul>
+      </footer>
+    </div>
+  </body>
 </html>
